@@ -1,5 +1,9 @@
 # Datascience portfolio
 
+## Presentations
+
+WIP
+
 ## Bullshit
 
 ### Assignment
@@ -48,6 +52,10 @@ Proof screenshot: WIP
 ### Coursera
 
 WIP
+
+### PySpark
+
+So close
 
 ## Machine learning
 
