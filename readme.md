@@ -55,6 +55,7 @@ With Boris I designed the process on how a 'train' could be made to work. This c
 I made the other people's jupyter files into Python packages that should be easily installable with pip.
 
 [Pepper_arcs](https://github.com/KinectingPepper/pepper_arcs)
+
 [Data_extraction](https://github.com/KinectingPepper/Data_Extraction)
 
 Sadly, due to serverside user-rights and usability issues concerning people's inexperience with working outside jupyter, these are not able to be used at the moment in jupyter, and the writers haven't updated them. 
@@ -63,8 +64,21 @@ These are currently in working condition last time I tested them.
 
 #### BACK TO JUPYTER
 
-Later on, the command-line-application was partly re-ported back to a jupyter application.
+Later on, the command-line-application was partly re-ported back to a Jupyter notebook by Hans due to not easily being able to run it in a notebook because it's uninstallable in the default environment that Jupyterhub used.
 
+This ended up in a non-working state. This was partly due to an issue in the C# program( and a weird decission by Microsoft to make it this was) where whether a decimal-character is ',' or a '.' depended on the environment the software was being run in.
+
+Due to the data_extraction package not being in an ideal state, it was really hard to debug this and other issues. It still gives error that I cannot explain.
+
+### Validation
+
+I participated in the validation of our angle-calculation code. 
+
+I found a tool to use called protractor to use to manually record the angles of images.
+
+I generated the frames from the videos with ffmpeg.
+
+I manually got the angles from person 2 and 4. In the end, my 
 ## Assignments
 
 ### Datacamp
@@ -83,13 +97,9 @@ Completed all assignments... In a more correct way than the supplied answers. (I
 ### Exploratory Data Analysis
 
 Completed all assignments.
-[Link](
+[Link](ExploratoryDataAnalysis)
 ## Machine learning
 
 ### Clustering
-
-WIP
-
-### Neural networks
 
 WIP
