@@ -2,7 +2,9 @@
 
 ## Presentations
 
-WIP
+During this course I worked on five presentations.
+
+[Link here](presentations)
 
 ## Bullshit
 
