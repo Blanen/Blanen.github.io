@@ -5,6 +5,11 @@
 Due to starting the course in different group I initially worked on summations of research papers on ambient electromagnetic radiation.
 
 After joining the Pepper team I started by reading, summing, and evaluating the relevance on some papers.
+[Paper1](docs/sum1.pdf]
+
+[Paper2](docs/sum2.pdf]
+
+[Paper3](docs/sum3.pdf]
 
 ## Presentations
 
