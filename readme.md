@@ -2,67 +2,145 @@
 
 ## Presentations
 
-WIP
+During this course I worked on five presentations.
+
+[Link here](presentations)
 
 ## Bullshit
 
 ### Assignment
 
-I got a seven on the Bullshit assignment.
+I got a 7.0 on the Bullshit in Datascience Assignment assignment. 
+
+[Link here to the document](docs/bullshit.pdf)
 
 ## Data gathering
 
-### Kinect_CSV
-I programmed a piece of the kinect recording software to be able to output CSVs. This is because CSVs are much easier to work with than xml files.
+### C# Kinect Application
 
-### Programmer guidelines
+#### Code Guidelines
+The first think I did on this was build a code contribution guideline
 
-In the beginning I set up guidelines on how we're going to go about programming our programs.
-This is now written in their respective repositories' readme files. 
-This is mainly about how we are allowed to make changes to programs and include such requirements as code reviews.
+[Link to PR](https://github.com/Hans2131/KinectingPepper/pull/4)
+I made it because the experience I have with fellow students adding code willy nilly is not always positive.
+This enforces peer reviews in code style and buildability. 
+I also added a file for the travis build system to ensure that every merge with master would be buildable.
+I later removed travis because I couldn't make it work correctly due to a lack of experience with its configuration.
+
+#### CSV Writing
+Early on I recognized the handiness of CSVs instead of xmls and other formats.
+
+[Link to PR](https://github.com/Hans2131/KinectingPepper/pull/9/files)
+I set on to make the application able to work with CSVs.
+First I made it so I could load-in existing xml files and convert them to csvs. This part of the code stayed in my own branch for a while. Later on I made it also output CSVs together with the xmls when saving.
+Hans later added a dialogbox so you could select a folder of XMLs to convert instead of having a hardcoded folder.
+
+#### Usabilty
+I saw that there were some mistakes going on in recording and made it so it would disable the start button when already started and disable the stop button when it already stopped. [Link here](https://github.com/Hans2131/KinectingPepper/pull/12/files)
 
 ## Data manipulation
 
 ### CSV Combinator
-I created a python package that can combine a folder of folders of Kinect data to a single csv. This is much easier to work with than having hundreds of seperate CSV files.
+In order to work with the kinect data easily, I started working on a way to combine all generated CSV into a single CSV.
+The Person's ID was in the folder name and the Exercise ID didn't exist in the data but could be gotten by taking the csv in alphabetical order. 
 Link [Here](https://github.com/Blanen/csv_combinator)
 
 ### Pepper train
+When we wanted to start doing real analysis we needed a way to proccess new people recordings quickly. Other people started working on this but I saw that this was going to go wrong. The problem was that they each had their own Jupyter notebooks for their part of the analysis. What ended up happening was that person-A's code was getting called inside person-B's functions. The problem with this is that person-B's code is now dependant on Person-A's code, while there is no real way of doing version control.
 
-With Boris I designed the process on how a 'train' could be made to work. This combines many steps of data manipulation to raw kinect data. Afterwards I build this into a python package [Here](https://github.com/KinectingPepper/pepper_train)
+With Boris I designed the process on how a 'train' could be made to work. This combines many steps of data manipulation to raw kinect data. I build this into a python command line application [Here](https://github.com/KinectingPepper/pepper_train)
 
-### Packagize other code
+#### Packagize other code
 
-Because most people were making their code in jupyter, it was hard to work with this and almost impossible to do some version management on it. 
-I made the jupyter files into Python packages that should be easily installable with pip.
+I made the other people's jupyter files into Python packages that should be easily installable with pip.
 
 [Pepper_arcs](https://github.com/KinectingPepper/pepper_arcs)
+
 [Data_extraction](https://github.com/KinectingPepper/Data_Extraction)
 
-Sadly, due to serverside user-rights issues and usability concerning people's inexperience with working outside python, these are not able to be used at the moment in jupyter.
+Sadly, due to serverside user-rights and usability issues concerning people's inexperience with working outside jupyter, these are not able to be used at the moment in jupyter, and the writers haven't updated them. 
+
+These are currently in working condition last time I tested them.
+
+#### BACK TO JUPYTER
+
+Later on, the command-line-application was partly re-ported back to a Jupyter notebook by Hans due to not easily being able to run it in a notebook because it's uninstallable in the default environment that Jupyterhub used.
+
+This ended up in a non-working state. This was partly due to an issue in the C# program( and a weird decission by Microsoft to make it this way) where whether a decimal-character is ',' or a '.' depended on the environment the software was being run in.
+
+Due to the data_extraction package not being in an ideal state, it was really hard to debug this and other issues. It still gives errors that I cannot explain.
+
+### Validation
+
+I participated in the validation of our angle-calculation code. 
+
+I found a tool to use called protractor to use to manually record the angles of images.
+
+I generated the frames from the videos with ffmpeg.
+
+I manually got the angles from person 2 and 4. In the end, my extraction of angles of person 2 was done wrong and was redone.
+
+![Angle Extraction](images/manual_angle.png)
+
 
 ## Assignments
 
 ### Datacamp
 
-Completed almost all datacamp assignments.
-
-Proof screenshot: WIP
+Screenshot: [Link](images/datacamp.png)
 
 ### Coursera
 
-WIP
+Screenshot: [Link](images/coursera.png)
 
 ### PySpark
 
-So close
+Completed all assignments... In a more correct way than the supplied answers. (It didn't add up the count in the babynames-counties)
+
+[Link](tutorial_spark/)
+
+### Exploratory Data Analysis
+
+Completed all assignments.
+
+[Link](ExploratoryDataAnalysis/)
 
 ## Machine learning
 
 ### Clustering
 
-WIP
+#### On pepper data
 
-### Neural networks
+I did a clustering analysis on the age vs maximum-angle-of-painful-joint angle [Here](notebooks/clustering.ipynb)
 
-WIP
+#### On the images supplied by Jan-Dirk
+
+I did some color-quantization of an image by k-means clustering with the purpose of finding a palette or a dominant color. 
+
+[Here](notebooks/quantize.ipynb)
+
+What you can see in the results is a list of tuples. This tuple get a count of how many pixels are in the following cluster_centroid. 
+This way we can get a palette and/ or a dominant color from the image. The first results are not really interesting colors (black-ish/white-ish) but then you get a couple more interesting ones. 
+
+K-means is actually not the best way to do this, but it's the best current way in python.
+
+
+### Various
+
+#### Alternative angle calculation
+
+At some point in this course I got an idea on how to calculate the angles in an alternative way. My way didn't require the expensive rotation to be done on the body first but could be done on any raw frame data, saving calculation time. 
+
+[Link](notebooks/different_arc_calc.ipynb)
+
+I never ended up finishing it or my idea was just simply wrong. You can see in the results that, yes, you can recognize the start and end of a movement but the angle's values are completely wrong.
+
+#### Alternative exercise cutting
+
+Due to the previous mentioned state of the data_extraction library Boris and I set on to device an alternative way of identifying the start and end of a movement.
+
+We started with trying to smooth out the signal by various means. 
+
+Then we take the derivate in order so the start and ends of the movement should peak in the positive and negative respectively. I did get a promising result in the end but due to time constraints I couldn't continue with this work.
+
+[Link here](notebooks/started_filtering.ipynb)
