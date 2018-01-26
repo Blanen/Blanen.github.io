@@ -78,25 +78,31 @@ I found a tool to use called protractor to use to manually record the angles of 
 
 I generated the frames from the videos with ffmpeg.
 
-I manually got the angles from person 2 and 4. In the end, my 
+I manually got the angles from person 2 and 4. In the end, my extraction of angles of person 2 was done wrong and was redone.
+
+![Angle Extraction](images/manual_angle.png)
+
+
 ## Assignments
 
 ### Datacamp
 
-Proof screenshot: [Link](images/datacamp.png)
+Screenshot: [Link](images/datacamp.png)
 
 ### Coursera
 
-Proof screenshot: [Link](images/coursera.png)
+Screenshot: [Link](images/coursera.png)
 
 ### PySpark
 
 Completed all assignments... In a more correct way than the supplied answers. (It didn't add up the count in the babynames-counties)
+
 [Link](tutorial_spark/)
 
 ### Exploratory Data Analysis
 
 Completed all assignments.
+
 [Link](ExploratoryDataAnalysis/)
 
 ## Machine learning
@@ -105,10 +111,36 @@ Completed all assignments.
 
 #### On pepper data
 
-I did a clustering analysis on the age vs maximum-angle-of-painful-joint angle [Here](notebooks/clustering.ipynv)
+I did a clustering analysis on the age vs maximum-angle-of-painful-joint angle [Here](notebooks/clustering.ipynb)
 
 #### On the images supplied by Jan-Dirk
 
 I did some color-quantization of an image by k-means clustering with the purpose of finding a palette or a dominant color. 
 
 [Here](notebooks/quantize.ipynb)
+
+What you can see in the results is a list of tuples. This tuple get a count of how many pixels are in the following cluster_centroid. 
+This way we can get a palette and/ or a dominant color from the image. The first results are not really interesting colors (black-ish/white-ish) but then you get a couple more interesting ones. 
+
+K-means is actually not the best way to do this, but it's the best current way in python.
+
+
+### Various
+
+#### Alternative angle calculation
+
+At some point in this course I got an idea on how to calculate the angles in an alternative way. My way didn't require the expensive rotation to be done on the body first but could be done on any raw frame data, saving calculation time. 
+
+[Link](notebooks/different_arc_calc.ipynb)
+
+I never ended up finishing it or my idea was just simply wrong. You can see in the results that, yes, you can recognize the start and end of a movement but the angle's values are completely wrong.
+
+#### Alternative exercise cutting
+
+Due to the previous mentioned state of the data_extraction library Boris and I set on to device an alternative way of identifying the start and end of a movement.
+
+We started with trying to smooth out the signal by various means. 
+
+Then we take the 2nd derivate in order so the start and ends of the movement should peak in the positive and negative respectively. I did get a promising result in the end but due to time constraints I couldn't continue with this work.
+
+[Link here](notebooks/started_filtering.ipynb)
