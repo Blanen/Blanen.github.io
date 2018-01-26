@@ -36,7 +36,7 @@ First I made it so I could load-in existing xml files and convert them to csvs. 
 Hans later added a dialogbox so you could select a folder of XMLs to convert instead of having a hardcoded folder.
 
 #### Usabilty
-I saw that there were some mistakes going on in recording and made it so it would disable the start button when already started and disable the stop button when it already stopped. [Link here](https://github.com/Hans2131/KinectingPepper/pull/12/files)
+I saw that there were some mistakes going on in recording and made it so it would disable the start button when already started and disable the stop button when it already stopped. [Link here](https://github.com/Hans2131/KinectingPepper/pull/12)
 
 ## Data manipulation
 
