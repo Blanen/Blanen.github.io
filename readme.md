@@ -66,9 +66,9 @@ These are currently in working condition last time I tested them.
 
 Later on, the command-line-application was partly re-ported back to a Jupyter notebook by Hans due to not easily being able to run it in a notebook because it's uninstallable in the default environment that Jupyterhub used.
 
-This ended up in a non-working state. This was partly due to an issue in the C# program( and a weird decission by Microsoft to make it this was) where whether a decimal-character is ',' or a '.' depended on the environment the software was being run in.
+This ended up in a non-working state. This was partly due to an issue in the C# program( and a weird decission by Microsoft to make it this way) where whether a decimal-character is ',' or a '.' depended on the environment the software was being run in.
 
-Due to the data_extraction package not being in an ideal state, it was really hard to debug this and other issues. It still gives error that I cannot explain.
+Due to the data_extraction package not being in an ideal state, it was really hard to debug this and other issues. It still gives errors that I cannot explain.
 
 ### Validation
 
@@ -97,9 +97,18 @@ Completed all assignments... In a more correct way than the supplied answers. (I
 ### Exploratory Data Analysis
 
 Completed all assignments.
-[Link](ExploratoryDataAnalysis)
+[Link](ExploratoryDataAnalysis/)
+
 ## Machine learning
 
 ### Clustering
 
-WIP
+#### On pepper data
+
+I did a clustering analysis on the age vs maximum-angle-of-painful-joint angle [Here](notebooks/clustering.ipynv)
+
+#### On the images supplied by Jan-Dirk
+
+I did some color-quantization of an image by k-means clustering with the purpose of finding a palette or a dominant color. 
+
+[Here](notebooks/quantize.ipynb)
