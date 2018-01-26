@@ -98,7 +98,7 @@ I supplied a document to the pepper_train part on how I recommend to continue bu
 
 I participated in the validation of our angle-calculation code. 
 
-I found a tool to use called protractor to use to manually record the angles of images.
+I found a tool to use called protractor to manually record the angles of images.
 
 I generated the frames from the videos with ffmpeg.
 
