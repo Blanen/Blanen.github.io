@@ -141,6 +141,6 @@ Due to the previous mentioned state of the data_extraction library Boris and I s
 
 We started with trying to smooth out the signal by various means. 
 
-Then we take the 2nd derivate in order so the start and ends of the movement should peak in the positive and negative respectively. I did get a promising result in the end but due to time constraints I couldn't continue with this work.
+Then we take the derivate in order so the start and ends of the movement should peak in the positive and negative respectively. I did get a promising result in the end but due to time constraints I couldn't continue with this work.
 
 [Link here](notebooks/started_filtering.ipynb)
