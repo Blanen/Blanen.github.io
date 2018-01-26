@@ -44,7 +44,7 @@ I later removed travis because I couldn't make it work correctly due to a lack o
 #### CSV Writing
 Early on I recognized the handiness of CSVs instead of xmls and other formats.
 
-[Link to PR](https://github.com/Hans2131/KinectingPepper/pull/9/files)
+[Link to PR](https://github.com/Hans2131/KinectingPepper/pull/9)
 I set on to make the application able to work with CSVs.
 First I made it so I could load-in existing xml files and convert them to csvs. This part of the code stayed in my own branch for a while. Later on I made it also output CSVs together with the xmls when saving.
 Hans later added a dialogbox so you could select a folder of XMLs to convert instead of having a hardcoded folder.
