@@ -1,5 +1,11 @@
 # Datascience portfolio
 
+## Research papers
+
+Due to starting the course in different group I initially worked on summations of research papers on ambient electromagnetic radiation.
+
+After joining the Pepper team I started by reading, summing, and evaluating the relevance on some papers.
+
 ## Presentations
 
 During this course I worked on five presentations.
@@ -62,6 +68,12 @@ Sadly, due to serverside user-rights and usability issues concerning people's in
 
 These are currently in working condition last time I tested them.
 
+#### Managing environments with conda
+
+Created a document to explain how to create and use a conda environment in anticipation of usage of the command line application.
+
+[Link](managen_env.pdf)
+
 #### BACK TO JUPYTER
 
 Later on, the command-line-application was partly re-ported back to a Jupyter notebook by Hans due to not easily being able to run it in a notebook because it's uninstallable in the default environment that Jupyterhub used.
@@ -69,6 +81,10 @@ Later on, the command-line-application was partly re-ported back to a Jupyter no
 This ended up in a non-working state. This was partly due to an issue in the C# program( and a weird decission by Microsoft to make it this way) where whether a decimal-character is ',' or a '.' depended on the environment the software was being run in.
 
 Due to the data_extraction package not being in an ideal state, it was really hard to debug this and other issues. It still gives errors that I cannot explain.
+
+#### Future work
+
+I supplied a document to the pepper_train part on how I recommend to continue building on this code. [Link](pepper_train_recommendations.md)
 
 ### Validation
 
@@ -81,6 +97,10 @@ I generated the frames from the videos with ffmpeg.
 I manually got the angles from person 2 and 4. In the end, my extraction of angles of person 2 was done wrong and was redone.
 
 ![Angle Extraction](images/manual_angle.png)
+
+## White Paper
+
+I made some contributions to the whitepaper according to [The planning](docs/planning.pdf)
 
 
 ## Assignments
@@ -125,9 +145,9 @@ This way we can get a palette and/ or a dominant color from the image. The first
 K-means is actually not the best way to do this, but it's the best current way in python.
 
 
-### Various
+## Experimentation
 
-#### Alternative angle calculation
+### Alternative angle calculation
 
 At some point in this course I got an idea on how to calculate the angles in an alternative way. My way didn't require the expensive rotation to be done on the body first but could be done on any raw frame data, saving calculation time. 
 
@@ -135,7 +155,7 @@ At some point in this course I got an idea on how to calculate the angles in an 
 
 I never ended up finishing it or my idea was just simply wrong. You can see in the results that, yes, you can recognize the start and end of a movement but the angle's values are completely wrong.
 
-#### Alternative exercise cutting
+### Alternative exercise cutting
 
 Due to the previous mentioned state of the data_extraction library Boris and I set on to device an alternative way of identifying the start and end of a movement.
 
