@@ -8,18 +8,27 @@ WIP
 
 ### Assignment
 
-I got a seven on the Bullshit assignment.
+I got a 7.0 on the Bullshit in Datascience Assignment assignment. [Link here to the document](docs/bullshit.pdf)
 
 ## Data gathering
 
-### Kinect_CSV
-I programmed a piece of the kinect recording software to be able to output CSVs. This is because CSVs are much easier to work with than xml files.
+### C# Kinect Application
 
-### Programmer guidelines
+#### Code Guidelines
+The first think I did on this was build a code contribution guideline[Link to PR](https://github.com/Hans2131/KinectingPepper/pull/4)
+I made it because the experience I have with fellow students adding code willy nilly is not always positive.
+This enforces peer reviews in code style and buildability. 
+I also added a file for the travis build system to ensure that every merge with master would be buildable.
+I later removed travis because I couldn't make it work correctly due to a lack of experience with its configuration.
 
-In the beginning I set up guidelines on how we're going to go about programming our programs.
-This is now written in their respective repositories' readme files. 
-This is mainly about how we are allowed to make changes to programs and include such requirements as code reviews.
+#### CSV Writing
+Early on I recognized the handiness of CSVs instead of xmls and other formats.[Link to PR](https://github.com/Hans2131/KinectingPepper/pull/9/files)
+I set on to make the application able to work with CSVs.
+First I made it so I could load-in existing xml files and convert them to csvs. This part of the code stayed in my own branch for a while. Later on I made it also output CSVs together with the xmls when saving.
+Hans later added a dialogbox so you could select a folder of XMLs to convert instead of having a hardcoded folder.
+
+#### Usabilty
+I saw that there were some mistakes going on in recording and made it so it would disable the start button when already started and disable the stop button when it already stopped. [Link here](https://github.com/Hans2131/KinectingPepper/pull/12/files)
 
 ## Data manipulation
 
