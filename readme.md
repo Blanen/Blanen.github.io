@@ -126,6 +126,7 @@ Screenshot: [Link here](images/coursera.png)
 Completed all assignments... In a more correct way than the supplied answers. (It didn't add up the count in the babynames-counties)
 
 [Link here](tutorial_spark/)
+assignment1.ipynb & assignment2.ipynb
 
 ### Exploratory Data Analysis
 
