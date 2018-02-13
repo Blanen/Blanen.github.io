@@ -80,7 +80,7 @@ These are currently in working condition last time I tested them.
 
 Created a document to explain how to create and use a conda environment in anticipation of usage of the command line application.
 
-[Link](managen_env.pdf)
+[Link here](managen_env.pdf)
 
 #### BACK TO JUPYTER
 
@@ -115,23 +115,23 @@ I made some contributions to the whitepaper according to [The planning](docs/pla
 
 ### Datacamp
 
-Screenshot: [Link](images/datacamp.png)
+Screenshot: [Link here](images/datacamp.png)
 
 ### Coursera
 
-Screenshot: [Link](images/coursera.png)
+Screenshot: [Link here](images/coursera.png)
 
 ### PySpark
 
 Completed all assignments... In a more correct way than the supplied answers. (It didn't add up the count in the babynames-counties)
 
-[Link](tutorial_spark/)
+[Link here](tutorial_spark/)
 
 ### Exploratory Data Analysis
 
 Completed all assignments.
 
-[Link](ExploratoryDataAnalysis/)
+[Link here](ExploratoryDataAnalysis/)
 
 ## Machine learning
 
@@ -145,7 +145,7 @@ I did a clustering analysis on the age vs maximum-angle-of-painful-joint angle [
 
 I did some color-quantization of an image by k-means clustering with the purpose of finding a palette or a dominant color. 
 
-[Here](notebooks/quantize.ipynb)
+[Link here](notebooks/quantize.ipynb)
 
 What you can see in the results is a list of tuples. This tuple get a count of how many pixels are in the following cluster_centroid. 
 This way we can get a palette and/ or a dominant color from the image. The first results are not really interesting colors (black-ish/white-ish) but then you get a couple more interesting ones. 
@@ -159,7 +159,7 @@ K-means is actually not the best way to do this, but it's the best current way i
 
 At some point in this course I got an idea on how to calculate the angles in an alternative way. My way didn't require the expensive rotation to be done on the body first but could be done on any raw frame data, saving calculation time. 
 
-[Link](notebooks/different_arc_calc.ipynb)
+[Link here](notebooks/different_arc_calc.ipynb)
 
 I never ended up finishing it or my idea was just simply wrong. You can see in the results that, yes, you can recognize the start and end of a movement but the angle's values are completely wrong.
 
